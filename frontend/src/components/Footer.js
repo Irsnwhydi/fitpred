@@ -19,49 +19,6 @@ const Footer = ({ navigate }) => (
           </p>
         </div>
 
-        <div style={{ display: 'flex', gap: 48, flexWrap: 'wrap' }}>
-          <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Navigasi</div>
-            <ul style={{ listStyle: 'none' }}>
-              {[
-                { label: 'Beranda', page: 'landing' },
-                { label: 'Dashboard', page: 'dashboard' },
-                { label: 'Cek Kesehatan', page: 'predict' },
-                { label: 'Riwayat', page: 'history' },
-              ].map(item => (
-                <li key={item.label} style={{ marginBottom: 10 }}>
-                  <span onClick={() => navigate(item.page)}
-                    style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem', cursor: 'pointer', transition: 'color 0.2s' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--color-secondary-light)'}
-                    onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.65)'}>
-                    {item.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <div style={{ fontSize: '0.8rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(255,255,255,0.4)', marginBottom: 16 }}>Akun</div>
-            <ul style={{ listStyle: 'none' }}>
-              {[
-                { label: 'Daftar', page: 'register' },
-                { label: 'Masuk', page: 'login' },
-                { label: 'Profil', page: 'profile' },
-                      ].map(item => (
-                <li key={item.label} style={{ marginBottom: 10 }}>
-                  <span onClick={() => navigate(item.page)}
-                    style={{ color: 'rgba(255,255,255,0.65)', fontSize: '0.9rem', cursor: 'pointer', transition: 'color 0.2s' }}
-                    onMouseEnter={e => e.target.style.color = 'var(--color-secondary-light)'}
-                    onMouseLeave={e => e.target.style.color = 'rgba(255,255,255,0.65)'}>
-                    {item.label}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </div>
-
       <div style={{ paddingTop: 24, borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
         <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', margin: 0 }}>
           © {new Date().getFullYear()} FitPred. Capstone Project — Healthy Lives & Well-being.
